@@ -9,6 +9,7 @@ import FriendList from './FriendList';
 
 import Post from './post';
 import {changeIsFriend} from '../actions/index.js';
+import { Button } from 'semantic-ui-react'
 
 export class Profile extends Component { 
   constructor(props) {
@@ -141,7 +142,7 @@ export class Profile extends Component {
       );
     } else {
       return (
-        <div className="profile">
+        <div>
           <Navbar />
           <br/>
           <div>
@@ -152,7 +153,7 @@ export class Profile extends Component {
 
           {!this.props.currentProfile ? null : 
             (!this.props.currentProfile.picture && this.props.currentProfile.id === this.props.loggedInAs.id) ? 
-              <div>
+              <div >
                 {this.state.picture === null ? 
 
                   <Dropzone 
@@ -179,7 +180,7 @@ export class Profile extends Component {
           </div>*/}
 
 
-          <div className="statusForm">
+          <div /*className="statusForm"*/>
             {/* <input name='status' onChange={ this.editStatus.bind(this) } placeholder='set status..'></input>
             <button onClick={ this.setStatus.bind(this) }>SET STATUS</button> */}
           </div>

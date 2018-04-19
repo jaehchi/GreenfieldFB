@@ -28,3 +28,7 @@
   height: 200px;
   width: 220px;
 }
+
+.profileImg{
+  border-radius: 8px
+}
